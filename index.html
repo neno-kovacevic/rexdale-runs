@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rexdale Runs</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
       rel="style"
       href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
     />
@@ -13,143 +19,151 @@
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script>
       $(document).ready(function () {
-        new DataTable("#example");
+        new DataTable("#example", {
+          order: [[3, "desc"]],
+          paging: false,
+        });
       });
     </script>
   </head>
   <body>
-    <h1>Rexdale Runs</h1>
-    <table id="example" class="display">
-      <thead>
-        <tr>
-          <th>Player</th>
-          <th>Wins</th>
-          <th>Losses</th>
-          <th>Record</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lucas</td>
-          <td>2</td>
-          <td>0</td>
-          <td>2-0</td>
-        </tr>
-        <tr>
-          <td>Christian M.</td>
-          <td>1</td>
-          <td>0</td>
-          <td>1-0</td>
-        </tr>
-        <tr>
-          <td>Raheem</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1-1</td>
-        </tr>
-        <tr>
-          <td>Aziah</td>
-          <td>2</td>
-          <td>2</td>
-          <td>2-2</td>
-        </tr>
-        <tr>
-          <td>Rob G.</td>
-          <td>1</td>
-          <td>2</td>
-          <td>1-2</td>
-        </tr>
-        <tr>
-          <td>Toni Z.</td>
-          <td>3</td>
-          <td>2</td>
-          <td>3-2</td>
-        </tr>
-        <tr>
-          <td>Armin</td>
-          <td>3</td>
-          <td>2</td>
-          <td>3-2</td>
-        </tr>
-        <tr>
-          <td>Neno</td>
-          <td>0</td>
-          <td>5</td>
-          <td>0-5</td>
-        </tr>
-        <tr>
-          <td>Zadro</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1-1</td>
-        </tr>
-        <tr>
-          <td>Viktor</td>
-          <td>2</td>
-          <td>3</td>
-          <td>2-3</td>
-        </tr>
-        <tr>
-          <td>Niko N.</td>
-          <td>1</td>
-          <td>3</td>
-          <td>1-3</td>
-        </tr>
-        <tr>
-          <td>Ivan</td>
-          <td>1</td>
-          <td>4</td>
-          <td>1-4</td>
-        </tr>
-        <tr>
-          <td>Max</td>
-          <td>2</td>
-          <td>1</td>
-          <td>2-1</td>
-        </tr>
-        <tr>
-          <td>Prav</td>
-          <td>0</td>
-          <td>4</td>
-          <td>0-4</td>
-        </tr>
-        <tr>
-          <td>Jason</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1-1</td>
-        </tr>
-        <tr>
-          <td>Yunus</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1-1</td>
-        </tr>
-        <tr>
-          <td>Milos (Dictator)</td>
-          <td>9</td>
-          <td>0</td>
-          <td>9-0</td>
-        </tr>
-        <tr>
-          <td>Nidzo</td>
-          <td>0</td>
-          <td>1</td>
-          <td>0-1</td>
-        </tr>
-        <tr>
-          <td>Kemo</td>
-          <td>2</td>
-          <td>0</td>
-          <td>2-0</td>
-        </tr>
-        <tr>
-          <td>Sandro</td>
-          <td>0</td>
-          <td>1</td>
-          <td>0-1</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="container pb-3">
+      <h1>Rexdale Runs</h1>
+      <table
+        id="example"
+        class="display compact table table-sm table-bordered table-striped table-hover mt-3"
+      >
+        <thead>
+          <tr class="table-primary">
+            <th class="text-center">Player</th>
+            <th class="text-center">Wins</th>
+            <th class="text-center">Losses</th>
+            <th class="text-center">Record</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lucas</td>
+            <td>2</td>
+            <td>0</td>
+            <td>2-0</td>
+          </tr>
+          <tr>
+            <td>Christian M.</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1-0</td>
+          </tr>
+          <tr>
+            <td>Raheem</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1-1</td>
+          </tr>
+          <tr>
+            <td>Aziah</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2-2</td>
+          </tr>
+          <tr>
+            <td>Rob G.</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1-2</td>
+          </tr>
+          <tr>
+            <td>Toni Z.</td>
+            <td>3</td>
+            <td>2</td>
+            <td>3-2</td>
+          </tr>
+          <tr>
+            <td>Armin</td>
+            <td>3</td>
+            <td>2</td>
+            <td>3-2</td>
+          </tr>
+          <tr>
+            <td>Neno</td>
+            <td>0</td>
+            <td>5</td>
+            <td>0-5</td>
+          </tr>
+          <tr>
+            <td>Zadro</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1-1</td>
+          </tr>
+          <tr>
+            <td>Viktor</td>
+            <td>2</td>
+            <td>3</td>
+            <td>2-3</td>
+          </tr>
+          <tr>
+            <td>Niko N.</td>
+            <td>1</td>
+            <td>3</td>
+            <td>1-3</td>
+          </tr>
+          <tr>
+            <td>Ivan</td>
+            <td>1</td>
+            <td>4</td>
+            <td>1-4</td>
+          </tr>
+          <tr>
+            <td>Max</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2-1</td>
+          </tr>
+          <tr>
+            <td>Prav</td>
+            <td>0</td>
+            <td>4</td>
+            <td>0-4</td>
+          </tr>
+          <tr>
+            <td>Jason</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1-1</td>
+          </tr>
+          <tr>
+            <td>Yunus</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1-1</td>
+          </tr>
+          <tr>
+            <td>Milos (Dictator)</td>
+            <td>9</td>
+            <td>0</td>
+            <td>9-0</td>
+          </tr>
+          <tr>
+            <td>Nidzo</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0-1</td>
+          </tr>
+          <tr>
+            <td>Kemo</td>
+            <td>2</td>
+            <td>0</td>
+            <td>2-0</td>
+          </tr>
+          <tr>
+            <td>Sandro</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0-1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>
